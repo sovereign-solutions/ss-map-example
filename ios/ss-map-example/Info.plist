@@ -35,8 +35,14 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
+	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>always and when in use</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>always use</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>when in use</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

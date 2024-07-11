@@ -2,3 +2,4 @@
 modules
 android/app/build
 node_modules
+ios/Pods
