@@ -3,3 +3,6 @@ modules
 android/app/build
 node_modules
 ios/Pods
+.yarn
+android/.gradle
+android/.idea

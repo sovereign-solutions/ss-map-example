@@ -3,8 +3,7 @@ import { View, LogBox, StatusBar, Text as RNText } from 'react-native';
 import { SearchService, Map } from 'ss-map';
 import MapboxGL from '@react-native-mapbox-gl/maps';
 import { MapScreen } from './src/components/MapScreen';
-MapboxGL.setAccessToken('pk.eyJ1IjoidGhhbmdkdCIsImEiOiJja3FhbWFuYzEwOGNxMndxN2N5aXhueTcxIn0.fT1mYkCCZZ9EIka_JMFtww');
-// MapboxGL.setTelemetryEnabled(false);
+
 LogBox.ignoreAllLogs(true);
 // StatusBar.setBarStyle('dark-content');
 const MyBase = () => {

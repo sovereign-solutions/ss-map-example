@@ -1,15 +1,16 @@
-# ss-map
+# ss-map-example
 
-ss-mapview for react native
+example for ss-map for react native 
 
 ## Installation
 
 In package.json add:
 
 ```sh
-"ss-map": "githublink"`
+"ss-map": "git://github.com/sovereign-solutions/ss-map.git"`
 
 //add dependencies
+"@react-native-mapbox-gl/maps": "8.5.0",
 "react": "17.0.2",
 "react-dom": "18.2.0",
 "react-native": "0.66.5",
@@ -79,6 +80,11 @@ In Podfile
 In info.plist add these keys and descriptions: NSLocationWhenInUseUsageDescription, NSLocationAlwaysAndWhenInUseUsageDescription, NSLocationAlwaysUsageDescription, NSMotionUsageDescription
 
 ## Usage
+in project index.js add
+```js
+import MapboxGL from '@react-native-mapbox-gl/maps';
+MapboxGL.setAccessToken('pk.eyJ1IjoidG...'); // you mapbox key
+```
 
 ```js
 import { Map } from "ss-map";
@@ -87,22 +93,11 @@ import { Map } from "ss-map";
 
 <Map.AllProvider>
   <Map
-    overrideParams={{ API_KEY: "ed54ebec-d746-4685-a7da-8fbf70f43456" }}
+    overrideParams={{ API_KEY: "ed54ebec-..." }} // use your sovereign solutions API_KEY 
     zoomLevel={14}
     hideUserLocation={false}
     floatingMyLocation
-    mapKey={
-      "bearer FmZJjzEqzHX1ZOp67-IWffug6xXCWxFGEnDnzrYO9sb0RxaDwieum9MSkO9cOEYO7SItQFmNEENRvEPe5Ka_irHdQoceCcw4sUeSafnff9zvDAHZXWO4toRq91ECAct-1hnW8-lZy3CWLH6MM2Tn8EarMSVgQrxzgEoRNyHMTzgvuxX0xTysF_PQWtraWAURL8tohvXLxZ2R8TXetoMtTSdvsKmv7MbOwqn5z5lGtgGeAUM4qGQzyPejCGAi_BfvEAhRPFEZ-qZyd_A1DgRyTYxioAMqtgnyG6WJQwDasvdsXsE0qO-vSpEr2Q1ZCahEieKm6h8pCcFBOlnjYrVBjjhdlfTIrDU_RsznqiUM8jK1chQBBaZQhoOPZssbNAGoCQQLLXKt7mcSbhCy9ej1eIhONOxemSJwY71QCmqsvEJHSz2ftRhgRMUnpeRUBw-552OwMw"
-    }
   ></Map>
 </Map.AllProvider>;
 // ...
 ```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT

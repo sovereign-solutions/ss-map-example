@@ -12,8 +12,8 @@
     "@turf/bbox": "7.0.0",
     "@turf/buffer": "6.5.0",
     "@turf/distance": "^6.5.0",
-    "@types/react": "18.3.3",
     "@types/prop-types": "15.7.8",
+    "@types/react": "18.3.3",
     "@types/react-native": "0.64.13",
     "i18next": "20.6.1",
     "patch-package": "6.5.1",
@@ -26,7 +26,7 @@
     "react-native-permissions": "3.5.0",
     "react-native-svg": "12.1.1",
     "react-native-svg-transformer": "0.14.3",
-    "ss-map": "file:./modules/ss-map"
+    "ss-map": "git://github.com/sovereign-solutions/ss-map.git"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
