@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { View } from 'react-native';
-import { Map } from 'ss-map';
+import { Map, CommonHelper } from 'ss-map';
 import MapboxGL from '@react-native-mapbox-gl/maps';
 export const MapScreen = () => {
     const {
@@ -85,6 +85,14 @@ export const MapScreen = () => {
     });
 
     const sampleFeatureCollection = generateSampleFeatureCollection();
+
+    const getNearByPoints = (lat: number, lng: number, radius: number) =>
+    {
+      return samplePoints.filter(point => CommonHelper.getDistance({X: lng, Y: lat}, {X: point.longitude, Y: point.latitude}) < radius);
+    }
+
+    console.log('NearbyPoint 300 meters', JSON.stringify(getNearByPoints(28.613889,77.208889, 300).map(item => item.title)));
+    
     return (
         <View style={{ flex: 1 }}>
             <Map
