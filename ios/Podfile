@@ -4,9 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '11.0'
 
 target 'ss-map-example' do
-  permissions_path = '../node_modules/react-native-permissions/ios'
-  pod 'Permission-LocationAlways', :path => "#{permissions_path}/LocationAlways"
-  pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse"
+
   config = use_native_modules!
 
   use_react_native!(
@@ -20,9 +18,6 @@ target 'ss-map-example' do
     # Pods for testing
   end
 
-  pre_install do |installer|
-    $RNMBGL.pre_install(installer)
-  end
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and

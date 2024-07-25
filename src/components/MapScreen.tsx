@@ -127,6 +127,7 @@ class MapScreen extends Component {
             <MapLibreGL.MapView
             style={{flex: 1, alignSelf: 'stretch'}}
             styleURL={JSON.stringify(styleDefault)}
+            attributionEnabled={false}
             >
               <MapLibreGL.Camera
                 ref={this.cameraRef}
